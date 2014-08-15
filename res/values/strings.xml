@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">lolololololol</string>
+    <string name="hello_world">Welcome to the VineCorrupt Android port! Thanks for downloading, and I hope you enjoy!
+	Credits:
+	Original program by Maiddog
+	Port for android created by shutterbug2000</string>
+    <string name="action_settings">Settings</string>
+	<string name="more_to_come">More to come soon!</string>
+	<string name="nes">NES</string>
+
+</resources>

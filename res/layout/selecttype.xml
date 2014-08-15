@@ -1,0 +1,67 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+	android:background="@color/grey"
+    android:orientation="vertical">
+    
+	<RadioGroup
+		android:orientation="vertical"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/type">	
+		<RadioButton 
+			android:textColor="@color/text"
+			android:id="@+id/ShiftButton"
+			android:text="Shift"/>
+		<RadioButton
+			android:textColor="@color/text"
+			android:id="@+id/SwapButton"
+			android:text="Swap"/>
+		<RadioButton
+			android:textColor="@color/text"
+			android:id="@+id/AddButton"
+			android:text="Add"/>
+		<RadioButton
+			android:textColor="@color/text"
+			android:id="@+id/SetButton"
+			android:text="Set"/>
+		<RadioButton
+			android:textColor="@color/text"
+			android:id="@+id/RandomButton"
+			android:text="Random"/>
+		<RadioButton
+			android:textColor="@color/text"
+			android:id="@+id/RotateLeftButton"
+			android:text="Bitwise Rotate Left"/>
+		<RadioButton
+			android:textColor="@color/text"
+			android:id="@+id/RotateRightButton"
+			android:text="Bitwise Rotate Right"/>
+		<RadioButton
+			android:textColor="@color/text"
+			android:id="@+id/AndButton"
+			android:text="Bitwise AND"/>
+		<RadioButton
+			android:textColor="@color/text"
+			android:id="@+id/OrButton"
+			android:text="Bitwise OR"/>
+		<RadioButton
+			android:textColor="@color/text"
+			android:id="@+id/XorButton"
+			android:text="Bitwise XOR"/>
+		<RadioButton
+			android:textColor="@color/text"
+			android:id="@+id/ComplementButton"
+			android:text="Bitwise Complement"/>
+	</RadioGroup>
+	<Button
+		android:textColor="@color/text"
+		android:id="@+id/TypeOk"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="Ok"
+		/>
+	
+
+	
+</LinearLayout>

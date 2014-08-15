@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<TableLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+		android:layout_width="fill_parent" 
+		android:background="@color/grey"
+		android:layout_height="fill_parent">
+		<TableRow>
+			<EditText
+				android:textColor="@color/text"
+				android:gravity="center"
+				android:layout_weight="1"
+				android:id="@+id/file_name"
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent"
+				android:hint="Input file"/>
+		</TableRow>
+
+		<TableRow
+		    android:id="@+id/tableRow2"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content" >
+		</TableRow>
+
+		<TableRow	android:gravity="center"
+			android:layout_width="match_parent"
+			android:layout_height="fill_parent">
+			<EditText
+				android:textColor="@color/text"
+				android:gravity="center"
+				android:layout_weight="1"
+				android:id="@+id/output_name"
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent"
+				android:hint="Output file" />
+		</TableRow>
+
+		<TableRow
+		    android:id="@+id/tableRow3"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content" >
+
+			<CheckBox
+			    android:id="@+id/prg_box"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:text="Corrupt PRG-ROM" />
+
+			<CheckBox
+			    android:id="@+id/chr_box"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:text="Corrupt CHR-ROM" />
+
+		</TableRow>
+		
+		<TableRow android:gravity="left">
+			<EditText
+				android:textColor="@color/text"
+				android:id="@+id/prg_step"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:hint="PRG Step"
+				android:inputType="number" />
+
+			<EditText
+			    android:id="@+id/chr_step"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:ems="10"
+			    android:hint="CHR Step"
+			    android:inputType="number"
+			    android:textColor="@color/text" >
+
+			    <requestFocus />
+			</EditText>
+
+		</TableRow>
+		
+		<TableRow android:gravity="left">
+			<EditText
+				android:textColor="@color/text"
+				android:id="@+id/prg_start"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:hint="PRG Start"
+				android:inputType="number" />
+
+			<EditText
+			    android:id="@+id/chr_start"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:ems="10"
+			    android:hint="CHR Start"
+			    android:inputType="number"
+			    android:textColor="@color/text" />
+
+		</TableRow>
+		
+		<TableRow android:gravity="left">
+			<EditText
+				android:textColor="@color/text"
+				android:id="@+id/prg_stop"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:hint="PRG Stop"
+				android:inputType="number" />
+
+			<EditText
+			    android:id="@+id/chr_stop"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:ems="10"
+			    android:hint="CHR Stop"
+			    android:inputType="number"
+			    android:textColor="@color/text" />
+
+		</TableRow>
+		
+		<TableRow android:gravity="left">
+			<Button 
+				android:textColor="@color/text"
+				android:id="@+id/nesPrgTypeButton"
+				android:text="PRG Type select"/>
+
+			<Button
+			    android:id="@+id/nesChrTypeButton"
+			    android:text="CHR Type select"
+			    android:textColor="@color/text" />
+
+		</TableRow>
+		
+		<TableRow android:gravity="left">
+			<EditText
+				android:textColor="@color/text"
+				android:id="@+id/prg_type_value"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:hint="Type Amount"
+				android:inputType="number" />
+
+			<EditText
+			    android:id="@+id/chr_type_value"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:ems="10"
+			    android:hint="Type Amount"
+			    android:inputType="number"
+			    android:textColor="@color/text" />
+
+		</TableRow>
+
+		<TableRow android:gravity="right">
+		</TableRow>
+		
+		<TableRow android:gravity="center">
+		</TableRow>
+		
+			<TableRow android:gravity="center">
+				<Button
+					android:textColor="@color/text"
+					android:id="@+id/nesCorruptButton"
+					android:text="Corrupt"/>
+		</TableRow>
+		
+			
+	
+</TableLayout>
