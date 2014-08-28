@@ -192,8 +192,7 @@ public class MainActivity extends Activity {
 		{
 
 			@Override
-			public void onClick(View p1)
-			{
+			public void onClick(View p1){
 				EditText inFile = (EditText) findViewById(R.id.file_name);
 				String inFileName = inFile.getText().toString();
 				EditText outFile = (EditText) findViewById(R.id.output_name);
@@ -206,13 +205,13 @@ public class MainActivity extends Activity {
 				String stopBoxText = stopBox.getText().toString();
 				EditText typeValueBox = (EditText) findViewById(R.id.prg_type_value);
 				String typeValueBoxText = typeValueBox.getText().toString();
-				EditText stepBoxChr = (EditText) findViewById(R.id.prg_step);
+				EditText stepBoxChr = (EditText) findViewById(R.id.Chr_step);
 				String stepBoxTextChr = stepBoxChr.getText().toString();
-				EditText startBoxChr = (EditText) findViewById(R.id.prg_start);
+				EditText startBoxChr = (EditText) findViewById(R.id.Chr_start);
 				String startBoxTextChr = startBoxChr.getText().toString();
-				EditText stopBoxChr = (EditText) findViewById(R.id.prg_stop);
+				EditText stopBoxChr = (EditText) findViewById(R.id.Chr_stop);
 				String stopBoxTextChr = stopBoxChr.getText().toString();
-				EditText typeValueBoxChr = (EditText) findViewById(R.id.prg_type_value);
+				EditText typeValueBoxChr = (EditText) findViewById(R.id.Chr_type_value);
 				String typeValueBoxTextChr = typeValueBoxChr.getText().toString();
 				if(checkedPrgType == R.id.ShiftButton){
 					prgType = "-ph";
@@ -280,6 +279,14 @@ public class MainActivity extends Activity {
 				else if(checkedChrType == R.id.AddButton){
 					chrType = "-ca";
 				}
+				if(stopBoxTextChr == "0"){
+					stopBoxTextChr = "2147483647";
+				}
+
+				if(stopBoxText == "0"){
+					stopBoxText = "2147483647";
+				}
+
 				CheckBox prgChecked = (CheckBox) findViewById(R.id.prg_box);
 				CheckBox chrChecked = (CheckBox) findViewById(R.id.chr_box);
 				if(prgChecked.isChecked() && chrChecked.isChecked()){
