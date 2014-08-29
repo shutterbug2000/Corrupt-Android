@@ -18,6 +18,8 @@ public class MainActivity extends Activity {
 		System.loadLibrary("md-corrupter");
 	}
 	
+	public String inFileText;
+	public String outFileText;
 	public Button nes;
 	public Button nesTypeButton;
 	public int checkedPrgType;
@@ -32,6 +34,8 @@ public class MainActivity extends Activity {
 	public String nesChrStartFieldText;
 	public String nesChrStopFieldText;
 	public String nesChrTypeValueFieldText;
+	public String stopBoxText;
+	public String stopBoxTextChr;
 	public native void callCmdLine(String param1, String param2, String param3, String param4, String param5, String param6, String param7, String param8, String param9, String param10, String param11); 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -68,6 +72,8 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View p1)
 			{
+				EditText inFile = (EditText) findViewById(R.id.file_name);
+				EditText outFile = (EditText) findViewById(R.id.output_name);
 				EditText nesPrgStepField = (EditText)findViewById(R.id.prg_step);
 				EditText nesPrgStartField = (EditText)findViewById(R.id.prg_start);
 				EditText nesPrgStopField = (EditText)findViewById(R.id.prg_stop);
@@ -76,6 +82,8 @@ public class MainActivity extends Activity {
 				EditText nesChrStartField = (EditText)findViewById(R.id.chr_start);
 				EditText nesChrStopField = (EditText)findViewById(R.id.chr_stop);
 				EditText nesChrTypeValueField = (EditText)findViewById(R.id.chr_type_value);
+				inFileText = inFile.getText().toString();
+				outFileText = outFile.getText().toString();
 				nesPrgStepFieldText = nesPrgStepField.getText().toString();
 				nesPrgStartFieldText = nesPrgStartField.getText().toString();
 				nesPrgStopFieldText = nesPrgStopField.getText().toString();
@@ -95,6 +103,8 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View p1)
 			{
+				EditText inFile = (EditText) findViewById(R.id.file_name);
+				EditText outFile = (EditText) findViewById(R.id.output_name);
 				EditText nesPrgStepField = (EditText)findViewById(R.id.prg_step);
 				EditText nesPrgStartField = (EditText)findViewById(R.id.prg_start);
 				EditText nesPrgStopField = (EditText)findViewById(R.id.prg_stop);
@@ -103,6 +113,8 @@ public class MainActivity extends Activity {
 				EditText nesChrStartField = (EditText)findViewById(R.id.chr_start);
 				EditText nesChrStopField = (EditText)findViewById(R.id.chr_stop);
 				EditText nesChrTypeValueField = (EditText)findViewById(R.id.chr_type_value);
+				inFileText = inFile.getText().toString();
+				outFileText = outFile.getText().toString();
 				nesPrgStepFieldText = nesPrgStepField.getText().toString();
 				nesPrgStartFieldText = nesPrgStartField.getText().toString();
 				nesPrgStopFieldText = nesPrgStopField.getText().toString();
@@ -126,6 +138,8 @@ public class MainActivity extends Activity {
 				checkedPrgType = prgTypeGroup.getCheckedRadioButtonId();
 				setContentView(R.layout.nes);
 				setContentView(R.layout.nes);
+				EditText inFile = (EditText) findViewById(R.id.file_name);
+				EditText outFile = (EditText) findViewById(R.id.output_name);
 				Button nesChrTypeButton = (Button)findViewById(R.id.nesChrTypeButton);
 				nesChrTypeButton.setOnClickListener(nesChrTypeListen);
 				Button nesPrgTypeButton = (Button)findViewById(R.id.nesPrgTypeButton);
@@ -141,6 +155,8 @@ public class MainActivity extends Activity {
 				EditText nesChrStopField = (EditText)findViewById(R.id.chr_stop);
 				EditText nesChrTypeValueField = (EditText)findViewById(R.id.chr_type_value);
 				
+				inFile.setText(inFileText);
+				outFile.setText(outFileText);
 				nesPrgStepField.setText(nesPrgStepFieldText);
 				nesPrgStartField.setText(nesPrgStartFieldText);
 				nesPrgStopField.setText(nesPrgStopFieldText);
@@ -149,6 +165,7 @@ public class MainActivity extends Activity {
 				nesChrStartField.setText(nesChrStartFieldText);
 				nesChrStopField.setText(nesChrStopFieldText);
 				nesChrTypeValueField.setText(nesChrTypeValueFieldText);
+				
 			}			
 		};
 		
@@ -162,6 +179,8 @@ public class MainActivity extends Activity {
 				checkedChrType = chrTypeGroup.getCheckedRadioButtonId();
 				setContentView(R.layout.nes);
 				setContentView(R.layout.nes);
+				EditText inFile = (EditText)findViewById(R.id.file_name);
+				EditText outFile = (EditText)findViewById(R.id.output_name);
 				Button nesChrTypeButton = (Button)findViewById(R.id.nesChrTypeButton);
 				nesChrTypeButton.setOnClickListener(nesChrTypeListen);
 				Button nesPrgTypeButton = (Button)findViewById(R.id.nesPrgTypeButton);
@@ -185,6 +204,8 @@ public class MainActivity extends Activity {
 				nesChrStartField.setText(nesChrStartFieldText);
 				nesChrStopField.setText(nesChrStopFieldText);
 				nesChrTypeValueField.setText(nesChrTypeValueFieldText);
+				inFile.setText(inFileText);
+				outFile.setText(outFileText);
 				
 			}			
 		};
@@ -202,16 +223,18 @@ public class MainActivity extends Activity {
 				EditText startBox = (EditText) findViewById(R.id.prg_start);
 				String startBoxText = startBox.getText().toString();
 				EditText stopBox = (EditText) findViewById(R.id.prg_stop);
-				String stopBoxText = stopBox.getText().toString();
+				stopBoxText = stopBox.getText().toString();
+				int stopBoxInt = Integer.parseInt(stopBoxText);
 				EditText typeValueBox = (EditText) findViewById(R.id.prg_type_value);
 				String typeValueBoxText = typeValueBox.getText().toString();
-				EditText stepBoxChr = (EditText) findViewById(R.id.Chr_step);
+				EditText stepBoxChr = (EditText) findViewById(R.id.chr_step);
 				String stepBoxTextChr = stepBoxChr.getText().toString();
-				EditText startBoxChr = (EditText) findViewById(R.id.Chr_start);
+				EditText startBoxChr = (EditText) findViewById(R.id.chr_start);
 				String startBoxTextChr = startBoxChr.getText().toString();
-				EditText stopBoxChr = (EditText) findViewById(R.id.Chr_stop);
-				String stopBoxTextChr = stopBoxChr.getText().toString();
-				EditText typeValueBoxChr = (EditText) findViewById(R.id.Chr_type_value);
+				EditText stopBoxChr = (EditText) findViewById(R.id.chr_stop);
+				stopBoxTextChr = stopBoxChr.getText().toString();
+				int stopBoxIntChr = Integer.parseInt(stopBoxTextChr);
+				EditText typeValueBoxChr = (EditText) findViewById(R.id.chr_type_value);
 				String typeValueBoxTextChr = typeValueBoxChr.getText().toString();
 				if(checkedPrgType == R.id.ShiftButton){
 					prgType = "-ph";
@@ -279,17 +302,18 @@ public class MainActivity extends Activity {
 				else if(checkedChrType == R.id.AddButton){
 					chrType = "-ca";
 				}
-				if(stopBoxTextChr == "0"){
-					stopBoxTextChr = "2147483647";
-				}
-
-				if(stopBoxText == "0"){
-					stopBoxText = "2147483647";
-				}
-
+				
 				CheckBox prgChecked = (CheckBox) findViewById(R.id.prg_box);
 				CheckBox chrChecked = (CheckBox) findViewById(R.id.chr_box);
 				if(prgChecked.isChecked() && chrChecked.isChecked()){
+				if(stopBoxInt == 0){
+					stopBoxInt = Integer.MAX_VALUE;
+					stopBoxText = Integer.toString(stopBoxInt);
+				}
+				if(stopBoxIntChr == 0){
+					stopBoxIntChr = Integer.MAX_VALUE;
+					stopBoxTextChr = Integer.toString(stopBoxIntChr);
+				}
 				callCmdLine(inFileName, prgType, "--prg-start", "--prg-stop", "--prg-step", "--out", typeValueBoxText, startBoxText, stopBoxText, stepBoxText, outFileName);
 				callCmdLine(outFileName, chrType, "--chr-start", "--chr-stop", "--chr-step", "--out", typeValueBoxTextChr, startBoxTextChr, stopBoxTextChr, stepBoxTextChr, outFileName);
 				}
