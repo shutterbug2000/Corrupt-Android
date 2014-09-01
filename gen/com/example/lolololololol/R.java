@@ -69,7 +69,8 @@ public final class R {
         public static final int activity_main=0x7f030000;
         public static final int nes=0x7f030001;
         public static final int selecttype=0x7f030002;
-        public static final int tabbedmain=0x7f030003;
+        public static final int snes=0x7f030003;
+        public static final int tabbedmain=0x7f030004;
     }
     public static final class string {
         public static final int action_settings=0x7f060002;

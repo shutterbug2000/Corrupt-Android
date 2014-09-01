@@ -303,9 +303,6 @@ public class MainActivity extends Activity {
 					chrType = "-ca";
 				}
 				
-				CheckBox prgChecked = (CheckBox) findViewById(R.id.prg_box);
-				CheckBox chrChecked = (CheckBox) findViewById(R.id.chr_box);
-				if(prgChecked.isChecked() && chrChecked.isChecked()){
 				if(stopBoxInt == 0){
 					stopBoxInt = Integer.MAX_VALUE;
 					stopBoxText = Integer.toString(stopBoxInt);
@@ -314,6 +311,10 @@ public class MainActivity extends Activity {
 					stopBoxIntChr = Integer.MAX_VALUE;
 					stopBoxTextChr = Integer.toString(stopBoxIntChr);
 				}
+				
+				CheckBox prgChecked = (CheckBox) findViewById(R.id.prg_box);
+				CheckBox chrChecked = (CheckBox) findViewById(R.id.chr_box);
+				if(prgChecked.isChecked() && chrChecked.isChecked()){
 				callCmdLine(inFileName, prgType, "--prg-start", "--prg-stop", "--prg-step", "--out", typeValueBoxText, startBoxText, stopBoxText, stepBoxText, outFileName);
 				callCmdLine(outFileName, chrType, "--chr-start", "--chr-stop", "--chr-step", "--out", typeValueBoxTextChr, startBoxTextChr, stopBoxTextChr, stepBoxTextChr, outFileName);
 				}
