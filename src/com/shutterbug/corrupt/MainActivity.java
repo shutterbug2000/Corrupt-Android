@@ -21,6 +21,7 @@ public class MainActivity extends Activity {
 	public String inFileText;
 	public String outFileText;
 	public Button nes;
+	public Button snes;
 	public Button nesTypeButton;
 	public int checkedPrgType;
 	public int checkedChrType;
@@ -42,7 +43,9 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		nes = (Button)findViewById(R.id.nes);
+		snes = (Button)findViewById(R.id.snes);
 		nes.setOnClickListener(nesListen);
+		snes.setOnClickListener(snesListen);
 	}
 	private OnClickListener nesListen = new OnClickListener()
 	{
@@ -52,20 +55,44 @@ public class MainActivity extends Activity {
 		{
 			setContentView(R.layout.nes);
 			Button nesChrTypeButton = (Button)findViewById(R.id.nesChrTypeButton);
-			nesChrTypeButton.setOnClickListener(nesChrTypeListen);
+			snesTypeButton.setOnClickListener(snesTypeListen);
 			Button nesPrgTypeButton = (Button)findViewById(R.id.nesPrgTypeButton);
-			nesPrgTypeButton.setOnClickListener(nesPrgTypeListen);
 			Button nesPrgCorruptTypeButton = (Button)findViewById(R.id.nesCorruptButton);
 			nesPrgCorruptTypeButton.setOnClickListener(nesCorruptListen);
 			EditText nesPrgStepField = (EditText)findViewById(R.id.prg_step);
 			EditText nesPrgStartField = (EditText)findViewById(R.id.prg_start);
 			EditText nesPrgStopField = (EditText)findViewById(R.id.prg_stop);
-			EditText nesPrgTypeValueField = (EditText)findViewById(R.id.prg_type_value);
+			EditText nesPrgTypeValueField = (EditText)findViewById(R.id.type_value);
 			EditText nesChrStepField = (EditText)findViewById(R.id.chr_step);
 			EditText nesChrStartField = (EditText)findViewById(R.id.chr_start);
 			EditText nesChrStopField = (EditText)findViewById(R.id.chr_stop);
 			EditText nesChrTypeValueField = (EditText)findViewById(R.id.chr_type_value);
 			}
+	};
+		
+		private OnClickListener snesListen = new OnClickListener()
+		{
+
+			@Override
+			public void onClick(View p1)
+			{
+				setContentView(R.layout.nes);
+				Button nesChrTypeButton = (Button)findViewById(R.id.nesChrTypeButton);
+				nesChrTypeButton.setOnClickListener(nesChrTypeListen);
+				Button nesPrgTypeButton = (Button)findViewById(R.id.nesPrgTypeButton);
+				nesPrgTypeButton.setOnClickListener(nesPrgTypeListen);
+				Button nesPrgCorruptTypeButton = (Button)findViewById(R.id.nesCorruptButton);
+				nesPrgCorruptTypeButton.setOnClickListener(nesCorruptListen);
+				EditText nesPrgStepField = (EditText)findViewById(R.id.prg_step);
+				EditText nesPrgStartField = (EditText)findViewById(R.id.prg_start);
+				EditText nesPrgStopField = (EditText)findViewById(R.id.prg_stop);
+				EditText nesPrgTypeValueField = (EditText)findViewById(R.id.type_value);
+				EditText nesChrStepField = (EditText)findViewById(R.id.chr_step);
+				EditText nesChrStartField = (EditText)findViewById(R.id.chr_start);
+				EditText nesChrStopField = (EditText)findViewById(R.id.chr_stop);
+				EditText nesChrTypeValueField = (EditText)findViewById(R.id.chr_type_value);
+				}
+		};
 		
 		private OnClickListener nesPrgTypeListen = new OnClickListener()
 		{
@@ -77,7 +104,7 @@ public class MainActivity extends Activity {
 				EditText nesPrgStepField = (EditText)findViewById(R.id.prg_step);
 				EditText nesPrgStartField = (EditText)findViewById(R.id.prg_start);
 				EditText nesPrgStopField = (EditText)findViewById(R.id.prg_stop);
-				EditText nesPrgTypeValueField = (EditText)findViewById(R.id.prg_type_value);
+				EditText nesPrgTypeValueField = (EditText)findViewById(R.id.type_value);
 				EditText nesChrStepField = (EditText)findViewById(R.id.chr_step);
 				EditText nesChrStartField = (EditText)findViewById(R.id.chr_start);
 				EditText nesChrStopField = (EditText)findViewById(R.id.chr_stop);
@@ -108,7 +135,7 @@ public class MainActivity extends Activity {
 				EditText nesPrgStepField = (EditText)findViewById(R.id.prg_step);
 				EditText nesPrgStartField = (EditText)findViewById(R.id.prg_start);
 				EditText nesPrgStopField = (EditText)findViewById(R.id.prg_stop);
-				EditText nesPrgTypeValueField = (EditText)findViewById(R.id.prg_type_value);
+				EditText nesPrgTypeValueField = (EditText)findViewById(R.id.type_value);
 				EditText nesChrStepField = (EditText)findViewById(R.id.chr_step);
 				EditText nesChrStartField = (EditText)findViewById(R.id.chr_start);
 				EditText nesChrStopField = (EditText)findViewById(R.id.chr_stop);
@@ -149,7 +176,7 @@ public class MainActivity extends Activity {
 				EditText nesPrgStepField = (EditText)findViewById(R.id.prg_step);
 				EditText nesPrgStartField = (EditText)findViewById(R.id.prg_start);
 				EditText nesPrgStopField = (EditText)findViewById(R.id.prg_stop);
-				EditText nesPrgTypeValueField = (EditText)findViewById(R.id.prg_type_value);
+				EditText nesPrgTypeValueField = (EditText)findViewById(R.id.type_value);
 				EditText nesChrStepField = (EditText)findViewById(R.id.chr_step);
 				EditText nesChrStartField = (EditText)findViewById(R.id.chr_start);
 				EditText nesChrStopField = (EditText)findViewById(R.id.chr_stop);
@@ -190,7 +217,7 @@ public class MainActivity extends Activity {
 				EditText nesPrgStepField = (EditText)findViewById(R.id.prg_step);
 				EditText nesPrgStartField = (EditText)findViewById(R.id.prg_start);
 				EditText nesPrgStopField = (EditText)findViewById(R.id.prg_stop);
-				EditText nesPrgTypeValueField = (EditText)findViewById(R.id.prg_type_value);
+				EditText nesPrgTypeValueField = (EditText)findViewById(R.id.type_value);
 				EditText nesChrStepField = (EditText)findViewById(R.id.chr_step);
 				EditText nesChrStartField = (EditText)findViewById(R.id.chr_start);
 				EditText nesChrStopField = (EditText)findViewById(R.id.chr_stop);
@@ -209,6 +236,8 @@ public class MainActivity extends Activity {
 				
 			}			
 		};
+		
+		
 		private OnClickListener nesCorruptListen = new OnClickListener()
 		{
 
@@ -225,7 +254,7 @@ public class MainActivity extends Activity {
 				EditText stopBox = (EditText) findViewById(R.id.prg_stop);
 				stopBoxText = stopBox.getText().toString();
 				int stopBoxInt = Integer.parseInt(stopBoxText);
-				EditText typeValueBox = (EditText) findViewById(R.id.prg_type_value);
+				EditText typeValueBox = (EditText) findViewById(R.id.type_value);
 				String typeValueBoxText = typeValueBox.getText().toString();
 				EditText stepBoxChr = (EditText) findViewById(R.id.chr_step);
 				String stepBoxTextChr = stepBoxChr.getText().toString();
@@ -327,9 +356,125 @@ public class MainActivity extends Activity {
 				}
 			
 		};
-
+		
+		
+		private OnClickListener snesTypeListen = new OnClickListener()
+		{
+			@Override
+			public void onClick(View p1)
+			{
+				EditText inFile = (EditText) findViewById(R.id.file_name);
+				EditText outFile = (EditText) findViewById(R.id.output_name);
+				EditText nesStepField = (EditText)findViewById(R.id.step);
+				EditText nesStartField = (EditText)findViewById(R.id.start);
+				EditText nesStopField = (EditText)findViewById(R.id.stop);
+				EditText nesTypeValueField = (EditText)findViewById(R.id.type_value);
+				inFileText = inFile.getText().toString();
+				outFileText = outFile.getText().toString();
+				nesPrgStepFieldText = nesStepField.getText().toString();
+				nesPrgStartFieldText = nesStartField.getText().toString();
+				nesPrgStopFieldText = nesStopField.getText().toString();
+				nesPrgTypeValueFieldText = nesTypeValueField.getText().toString();
+				setContentView(R.layout.selecttype);
+				Button nesChrTypeOk = (Button)findViewById(R.id.TypeOk);
+				nesChrTypeOk.setOnClickListener(nesChrTypeOkListen);
+			}			
+		};
+		
 
 	};
+	
+	private OnClickListener snesTypeOkListen = new OnClickListener()
+	{
+		@Override
+		public void onClick(View p1)
+		{
+			RadioGroup prgTypeGroup = (RadioGroup)findViewById(R.id.type);
+			checkedPrgType = prgTypeGroup.getCheckedRadioButtonId();
+			setContentView(R.layout.nes);
+			setContentView(R.layout.nes);
+			EditText inFile = (EditText) findViewById(R.id.file_name);
+			EditText outFile = (EditText) findViewById(R.id.output_name);
+			Button nesChrTypeButton = (Button)findViewById(R.id.nesChrTypeButton);
+			nesChrTypeButton.setOnClickListener(snesTypeListen);
+			Button nesPrgTypeButton = (Button)findViewById(R.id.nesPrgTypeButton);
+			Button nesPrgCorruptTypeButton = (Button)findViewById(R.id.nesCorruptButton);
+			nesPrgCorruptTypeButton.setOnClickListener(nesCorruptListen);
+			EditText StepField = (EditText)findViewById(R.id.step);
+			EditText StartField = (EditText)findViewById(R.id.start);
+			EditText StopField = (EditText)findViewById(R.id.stop);
+			EditText TypeValueField = (EditText)findViewById(R.id.type_value);
+			
+			inFile.setText(inFileText);
+			outFile.setText(outFileText);
+			StepField.setText(StepFieldText);
+			StartField.setText(StartFieldText);
+			StopField.setText(StopFieldText);
+			TypeValueField.setText(TypeValueFieldText);
+			inFile.setText(inFileText);
+			outFile.setText(outFileText);
+		}			
+	};
+	
+	private OnClickListener snesCorruptListen = new OnClickListener()
+	{
+
+		@Override
+		public void onClick(View p1){
+			EditText inFile = (EditText) findViewById(R.id.file_name);
+			String inFileName = inFile.getText().toString();
+			EditText outFile = (EditText) findViewById(R.id.output_name);
+			String outFileName = outFile.getText().toString();
+			EditText stepBox = (EditText) findViewById(R.id.step);
+			String stepBoxText = stepBox.getText().toString();
+			EditText startBox = (EditText) findViewById(R.id.start);
+			String startBoxText = startBox.getText().toString();
+			EditText stopBox = (EditText) findViewById(R.id.stop);
+			stopBoxText = stopBox.getText().toString();
+			int stopBoxInt = Integer.parseInt(stopBoxText);
+			EditText typeValueBox = (EditText) findViewById(R.id.type_value);
+			String typeValueBoxText = typeValueBox.getText().toString();
+			if(checkedPrgType == R.id.ShiftButton){
+				prgType = "-h";
+			}
+			else if(checkedPrgType == R.id.SwapButton){
+				prgType = "-w";
+			}
+			else if(checkedPrgType == R.id.SetButton){
+				prgType = "-t";
+			}
+			else if(checkedPrgType == R.id.RandomButton){
+				prgType = "-r";
+			}
+			else if(checkedPrgType == R.id.RotateLeftButton){
+				prgType = "--bitshift-left";
+			}
+			else if(checkedPrgType == R.id.RotateRightButton){
+				prgType = "--bitshift-right";
+			}
+			else if(checkedPrgType == R.id.AndButton){
+				prgType = "--logical-and";
+			}
+			else if(checkedPrgType == R.id.OrButton){
+				prgType = "--logical-or";
+			}
+			else if(checkedPrgType == R.id.XorButton){
+				prgType = "--logical-xor";
+			}
+			else if(checkedPrgType == R.id.ComplementButton){
+				prgType = "--logical-complement";
+			}
+			else if(checkedPrgType == R.id.AddButton){
+				prgType = "-a";
+			
+			if(stopBoxInt == 0){
+				stopBoxInt = Integer.MAX_VALUE;
+				stopBoxText = Integer.toString(stopBoxInt);
+			}
+			};
+	
+				
+	
 		String file = "/sdcard/romtocorrupt.nes";
 		String oper = "--add";
 		String operv = "2";
@@ -341,7 +486,4 @@ public class MainActivity extends Activity {
 		String stepv = "512";
 		String out = "--out";
 		String outv = "/sdcard/romcorrupt.nes";
-		public void call(){
-		callCmdLine(file, oper, start, stop, step, out, operv, startv, stopv, stepv, outv);
-		}
-}
+};};

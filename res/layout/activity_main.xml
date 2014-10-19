@@ -15,6 +15,13 @@
 			android:id="@+id/nes"
 			android:text="@string/nes"
 			/>
+
+		<Button
+		    android:id="@+id/snes"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:text="snes" />
+
 		<TextView
 			android:textColor="@color/text"
 			android:gravity="center"
